@@ -1,0 +1,63 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Malinsha Motors - Repair Cost Calculator</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="manifest" href="manifest.json" />
+  
+</head>
+<body>
+  <div class="background"></div>
+  <div class="container">
+    <h1>Malinsha Motors - Repair Cost Calculator</h1>
+
+    <img src="assets/img/Three-Wheel-Sale-in-Sri-Lanka-1.jpg" alt="Three-Wheeler" />
+    <p class="caption">Painting & Engine Repairing Services</p>
+
+    <form id="repairForm">
+      <label for="customerName">Customer Name:</label>
+      <input type="text" id="customerName" required />
+
+      <label for="startDate">Start Date:</label>
+      <input type="date" id="startDate" required />
+
+      <label for="endDate">End Date:</label>
+      <input type="date" id="endDate" required />
+
+      <label for="paintCost">Painting Cost (LKR):</label>
+      <input type="number" id="paintCost" required />
+
+      <label for="engineCost">Engine Repair Cost (LKR):</label>
+      <input type="number" id="engineCost" required />
+
+      <label for="partsSelect">Used Parts (භාවිතා කළ කොටස්):</label>
+      <select id="partsSelect" multiple size="5">
+        <option value="1000">ටයර් (Tyre) - LKR 1000</option>
+        <option value="1500">බ්‍රේක් පෑඩ් (Brake Pad) - LKR 1500</option>
+        <option value="2000">එන්ජිම කොටස් (Engine Parts) - LKR 2000</option>
+        <option value="800">බැටරි (Battery) - LKR 800</option>
+        <option value="1200">ලයිට් (Lights) - LKR 1200</option>
+      </select>
+
+      <label for="laborCost">Labour Cost (LKR):</label>
+      <input type="number" id="laborCost" required />
+
+      <button type="submit">Generate Bill</button>
+    </form>
+
+    <div id="result"></div>
+    <button id="printBtn" style="display:none;">🖨️ Print Bill</button>
+    <button id="copyBtn" style="display:none;">📋 Copy Bill</button>
+    <a id="whatsappShare" style="display:none;" target="_blank">📤 Share via WhatsApp</a>
+  </div>
+
+  <script src="assets/js/app.js"></script>
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('service-worker.js');
+    }
+  </script>
+</body>
+</html>
