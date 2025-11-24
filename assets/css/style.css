@@ -86,7 +86,7 @@ button:hover {
 #result {
   margin-top: 30px;
   font-size: 16px;
-  color: #333;
+  color: #360606;
   background: #f9f9f9;
   padding: 15px;
   border-radius: 8px;
@@ -114,7 +114,7 @@ button:hover {
   }
 }
 .receipt-box {
-  border: 2px solid #0072ff;
+  border: 2px solid #5fac3b;
   padding: 20px;
   border-radius: 10px;
   background-color: #fff;
